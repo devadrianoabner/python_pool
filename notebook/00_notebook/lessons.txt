@@ -1,0 +1,27 @@
+Capture duas entradas diferentes do usuário, armazenando-as nas variáveis: first_word e second_word.
+
+Usando apenas uma única chamada da função print(), exiba as duas palavras na tela separadas por um traço - (ex: word1-word2).
+
+Regra de ouro: Você é expressamente proibido de somar/concatenar as strings (não pode usar o operador + e não pode modificar as variáveis). Você tem que forçar os parâmetros internos da própria função print() a fazerem a união.
+
+Logo na linha de baixo do seu código, faça uma segunda chamada: print("END"). A palavra END precisa aparecer na exata mesma linha da impressão anterior, colada na segunda palavra, sem pular de linha.
+
+------------
+python3
+help(print)
+
+print(*args, sep=' ', end='\n', file=None, flush=False)
+
+Prints the values to a stream, or to sys.stdout by default.
+
+sep
+    string inserted between values, default a space.
+
+end
+    string apprended after the last value, default a newline.
+
+file
+    a file-like object (stream); defaults to the current sys.stdout.
+
+flush
+    wheter to forcibly flush the stream.
