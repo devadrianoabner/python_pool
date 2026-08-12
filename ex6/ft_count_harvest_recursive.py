@@ -1,11 +1,15 @@
 
 
-def ft_count_harvest_recursive(current, limit):
-    print("Days until harvest: ", end="")
-    days_total = int(input())
-
-# Gatilho inicial
-    if days_total == 0:
+def helper_harvest(current, limit):
+    if limit >= current:
+        print("Day", current)
+        current += 1
+        helper_harvest(current, limit)
+    elif current > limit:
         print("Harvest time!")
-    else:
-        ft_count_harvest_recursive(1, days_total)
+
+
+def ft_count_harvest_recursive():
+    print("Days until harvest: ", end="")
+    days = int(input())
+    helper_harvest(1, days)
