@@ -125,12 +125,13 @@ class Vegetable(Plant):
         print(f" Nutritional value: {self._nutritional_value}")
         return
 
-    def grow(self, days) -> None:
+    def grow(self, days: int = 1) -> None:
         super().age(days)
         super().grow(days)
         print(f"[make {self._name.lower()} grow and age for {days} days]")
         self._nutritional_value += days
         self.show()
+        return
 
 
 if __name__ == "__main__":
