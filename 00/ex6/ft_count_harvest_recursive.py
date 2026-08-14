@@ -1,5 +1,3 @@
-
-
 def helper_harvest(current, limit):
     if limit >= current:
         print("Day", current)

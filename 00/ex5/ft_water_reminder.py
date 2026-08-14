@@ -1,5 +1,3 @@
-
-
 def ft_water_reminder():
     print("Days since last watering: ", sep="", end="")
     days = int(input())

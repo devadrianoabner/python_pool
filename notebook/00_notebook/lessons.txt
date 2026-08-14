@@ -25,3 +25,6 @@ file
 
 flush
     wheter to forcibly flush the stream.
+
+
+find . -name "*.py" -exec mypy {} \;
