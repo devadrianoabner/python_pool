@@ -45,11 +45,11 @@ class Plant:
 
     def get_age(self) -> int:
         self.show()
-        return self.age
+        return self._age_days
 
     def get_height(self) -> float:
         self.show()
-        return self.height
+        return self._height
 
 
 if __name__ == "__main__":
