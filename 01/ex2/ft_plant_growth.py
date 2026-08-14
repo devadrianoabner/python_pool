@@ -3,9 +3,9 @@
 
 class Plant:
     def __init__(self, name: str,
-                 height: int,
+                 height: float,
                  age: int,
-                 growth: int):
+                 growth: float):
         self.name = name
         self.height = height
         self.age_days = age
