@@ -1,0 +1,33 @@
+#!/usr/bin/env python3
+
+
+def garden_operations(operation_number: int) -> None:
+    if operation_number == 0:
+        int("a")
+    if operation_number == 1:
+        0 / 0
+    if operation_number == 2:
+        open("/biboga/diagonal")
+    if operation_number == 3:
+        "a" + 1
+    return
+
+
+def test_error_types() -> None:
+
+    for i in [0, 1, 2, 3, 4]:
+        print(f"Testing operation {i}...")
+        try:
+            garden_operations(i)
+        except ValueError as e:
+            print(f"Caught ValueError: {e}")
+        except ZeroDivisionError as e:
+            print(f"Caught ZeroDivisionError: {e}")
+        except FileNotFoundError as e:
+            print(f"Caught FileNotFoundError: {e}")
+        except TypeError as e:
+            print(f"Caught TypeErrpr: {e}")
+        else:
+            print("Operation completed successfully")
+        print()
+    print("All error types tested successfully!")
