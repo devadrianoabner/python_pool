@@ -26,8 +26,13 @@ def test_error_types() -> None:
         except FileNotFoundError as e:
             print(f"Caught FileNotFoundError: {e}")
         except TypeError as e:
-            print(f"Caught TypeErrpr: {e}")
+            print(f"Caught TypeError: {e}")
         else:
             print("Operation completed successfully")
         print()
     print("All error types tested successfully!")
+
+
+if __name__ == "__main__":
+    print("=== Garden Error Types Demo ===")
+    test_error_types()
