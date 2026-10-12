@@ -10,15 +10,15 @@ def open_file(filename: str) -> typing.IO[str]:
 
 def transform_content(content: str) -> str:
     lines = content.split("\n")
-    new_lines = []
+    new_lines: list[str] = []
     for line in lines:
         if line != "":
             new_line = line + "#"
         else:
             new_line = line
-        new_line.append(new_line)
-        new_content = "\n".join(new_lines)
-        return new_content
+        new_lines.append(new_line)
+    new_content = "\n".join(new_lines)
+    return new_content
 
 
 def save_file(filename: str, content: str) -> None:
@@ -38,6 +38,7 @@ def main() -> None:
         file = open_file(filename)
     except OSError as e:
         print(f"Error opening file '{filename}': {e}")
+        return
     content = file.read()
     file.close()
     print("---")
